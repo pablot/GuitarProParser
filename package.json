@@ -1,0 +1,31 @@
+{
+  "name": "GuitarProParser",
+  "version": "0.0.0",
+  "description": "Parser for GuitarPRO files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pablot/GuitarProParser.git"
+  },
+  "keywords": [
+    "guitar",
+    "pro",
+    "parser",
+    "music"
+  ],
+  "author": [
+    "Paweł Tymura",
+    "Mateusz Wolsza"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pablot/GuitarProParser/issues"
+  },
+  "homepage": "https://github.com/pablot/GuitarProParser",
+  "devDependencies": {
+    "expect.js": "^0.3.1"
+  }
+}

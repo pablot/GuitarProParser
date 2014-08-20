@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "GuitarProParser",
   "version": "0.0.0",
   "description": "Parser for GuitarPRO files",
@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/pablot/GuitarProParser",
   "devDependencies": {
-    "expect.js": "^0.3.1"
+    "expect.js": "^0.3.1",
+    "mocha": "1.x"
   },
   "dependencies": {
     "binary": "^0.3.0"

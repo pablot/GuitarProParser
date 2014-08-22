@@ -61,6 +61,18 @@ describe('Parsing', function() {
     it('Should parse notice', function() {
       expect( parsed.header.notice ).to.be( 'N line 1\nN line 2\nN line 3\nN line 4\n' );
     } );
+
+    it('Should parse triplet feel', function() {
+      expect( parsed.header.tripletFeel ).to.be( false );
+    } );
+
   } );
 
+  describe('Lyrics', function() {
+
+    it('Should parse lyrics', function() {
+      expect( parsed.lyrics ).to.be.ok();
+    } );
+
+  } );
 } );

@@ -70,8 +70,8 @@ describe('Parsing', function() {
 
   describe('Lyrics', function() {
 
-    it('Should parse lyrics', function() {
-      expect( parsed.lyrics ).to.be.ok();
+    it('Should parse track number that lyrics is bound to', function() {
+      expect( parsed.lyrics.trackNumber ).to.be(1);
     } );
 
   } );

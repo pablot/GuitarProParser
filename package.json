@@ -27,11 +27,11 @@
   "homepage": "https://github.com/pablot/GuitarProParser",
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "1.x",
-    "open": "*",
-    "optimist": "*"
+    "mocha": "1.x"
   },
   "dependencies": {
     "binary": "^0.3.0"
+    "open": "*",
+    "optimist": "*"
   }
 }

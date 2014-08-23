@@ -11,4 +11,4 @@ var data = fs.readFileSync(argv.f),
     parser = new Parser(data),
     parsed = parser.parse();
 
-console.dir(parsed.header);
+console.dir(parsed);

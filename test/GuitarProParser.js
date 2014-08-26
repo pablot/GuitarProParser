@@ -15,7 +15,7 @@ describe('Parsing', function() {
       parsed;
 
   beforeEach( function() {
-    var data = fs.readFileSync( __dirname + '/files/test.gp4' );
+    var data = fs.readFileSync( __dirname + '/files/test2.gp4' );
     parser = new Parser(data);
     parsed = parser.parse();
   } );
@@ -59,7 +59,7 @@ describe('Parsing', function() {
     } );
 
     it('Should parse notice', function() {
-      expect( parsed.header.notice ).to.be( 'N line 1\nN line 2\nN line 3\nN line 4\n' );
+      expect( parsed.header.notice ).to.be( 'N line 1N line 2N line 3N line 4\n' );
     } );
 
     it('Should parse triplet feel', function() {
@@ -74,5 +74,8 @@ describe('Parsing', function() {
       expect( parsed.lyrics.trackNumber ).to.be(1);
     } );
 
+    it('Should parse lyrics', function () {
+        expect(parsed.lyrics.lyrics).to.be('1111\r\n1111\r\n1111\r\n1111\r\n\r\n2222\r\n2222\r\n2222\r\n2222\r\n\r\n3333\r\n3333\r\n3333\r\n3333\r\n\r\n4444\r\n4444\r\n4444\r\n4444\r\n\r\n5555');
+      });
   } );
 } );

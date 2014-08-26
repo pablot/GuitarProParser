@@ -4,7 +4,7 @@
   "description": "Parser for GuitarPRO files",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --harmony --watch spec"
+    "test": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "mocha": "1.x"
   },
   "dependencies": {
-    "binary": "^0.3.0"
+    "binary": "^0.3.0",
     "open": "*"
   }
 }

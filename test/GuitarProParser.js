@@ -77,7 +77,7 @@ describe('Parsing', function() {
     });
 
     it('Should parse key', function() {
-      expect( parsed.techInfo.key ).to.be(0);
+      expect( parsed.techInfo.key ).to.be('C Major');
     });
 
     it('Should parse octave', function() {

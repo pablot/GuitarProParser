@@ -30,10 +30,6 @@ describe('Parsing', function() {
       expect( parsed.header.title ).to.be( 'Title' );
     } );
 
-    it('Should parse subtitle', function() {
-      expect( parsed.header.subtitle ).to.be( 'Subtitle' );
-    } );
-
     it('Should parse artist', function() {
       expect( parsed.header.artist ).to.be( 'Artist' );
     } );
@@ -54,12 +50,8 @@ describe('Parsing', function() {
       expect( parsed.header.tabAuthor ).to.be( 'Tab' );
     } );
 
-    it('Should parse instruction', function() {
-      expect( parsed.header.instruction ).to.be( 'Instruction' );
-    } );
-
     it('Should parse notice', function() {
-      expect( parsed.header.notice ).to.be( 'N line 1N line 2N line 3N line 4\n' );
+      expect( parsed.header.notice ).to.be( 'N line 1\r\nN line 2\r\nN line 3\r\nN line 4\n' );
     } );
 
     it('Should parse triplet feel', function() {
@@ -75,7 +67,7 @@ describe('Parsing', function() {
     } );
 
     it('Should parse lyrics', function () {
-        expect(parsed.lyrics.lyrics).to.be('1111\r\n1111\r\n1111\r\n1111\r\n\r\n2222\r\n2222\r\n2222\r\n2222\r\n\r\n3333\r\n3333\r\n3333\r\n3333\r\n\r\n4444\r\n4444\r\n4444\r\n4444\r\n\r\n5555');
+        expect(parsed.lyrics.lyrics).to.be( '1111\r\n1111\r\n1111\r\n1111\r\n\r\n2222\r\n2222\r\n2222\r\n2222\r\n\r\n3333\r\n3333\r\n3333\r\n3333\r\n\r\n4444\r\n4444\r\n4444\r\n4444\r\n\r\n5555');
       });
   } );
 } );

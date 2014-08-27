@@ -70,4 +70,19 @@ describe('Parsing', function() {
         expect(parsed.lyrics.lyrics).to.be( '1111\r\n1111\r\n1111\r\n1111\r\n\r\n2222\r\n2222\r\n2222\r\n2222\r\n\r\n3333\r\n3333\r\n3333\r\n3333\r\n\r\n4444\r\n4444\r\n4444\r\n4444\r\n\r\n5555');
       });
   } );
+
+  describe('TechInfo', function() {
+    it('Should parse tempo', function() {
+      expect( parsed.techInfo.tempo ).to.be(1);
+    });
+
+    it('Should parse key', function() {
+      expect( parsed.techInfo.key ).to.be(0);
+    });
+
+    it('Should parse octave', function() {
+      expect( parsed.techInfo.octave ).to.be(0);
+    });
+
+  });
 } );

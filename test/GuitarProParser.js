@@ -75,7 +75,7 @@ describe('Parsing', function() {
     } );
 
     it('Should parse lyrics', function () {
-        expect(parsed.lyrics.lyrics).to.be( '1111\r\n1111\r\n1111\r\n1111\n2222\r\n2222\r\n2222\r\n2222\n3333\r\n3333\r\n3333\n4444\r\n4444\n5555\n');
+        expect(parsed.lyrics.lyrics).to.be( '1111\r\n1111\r\n1111\r\n1111\n2222\r\n2222\r\n2222\r\n2222\n3333\r\n3333\r\n3333\n4444\r\n4444\n5555');
       });
   } );
 

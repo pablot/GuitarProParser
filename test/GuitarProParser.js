@@ -92,5 +92,20 @@ describe('Parsing', function() {
       expect( parsed.techInfo.octave ).to.be(3);
     });
 
+    it('Should parse midi channels to array', function() {
+      expect( parsed.techInfo.midiChannels ).to.be.a( Array );
+    });
+
+    it('Should have 64 midi channels', function() {
+      expect( parsed.techInfo.midiChannels.length ).to.be( 64 );
+    });
+
+    it('Should parse measures', function() {
+      expect( parsed.techInfo.measures ).to.be( 1 );
+    });
+
+    it('Should parse number of tracks', function() {
+      expect( parsed.techInfo.tackNum ).to.be( 1 );
+    });
   });
 } );

@@ -81,15 +81,15 @@ describe('Parsing', function() {
 
   describe('TechInfo', function() {
     it('Should parse tempo', function() {
-      expect( parsed.techInfo.tempo ).to.be(1);
+      expect( parsed.techInfo.tempo ).to.be(120);
     });
 
     it('Should parse key', function() {
-      expect( parsed.techInfo.key ).to.be('C Major');
+      expect( parsed.techInfo.key ).to.be('G Major');
     });
 
     it('Should parse octave', function() {
-      expect( parsed.techInfo.octave ).to.be(3);
+      expect( parsed.techInfo.octave ).to.be(0);
     });
 
     it('Should parse midi channels to array', function() {
@@ -101,11 +101,11 @@ describe('Parsing', function() {
     });
 
     it('Should parse measures', function() {
-      expect( parsed.techInfo.measures ).to.be( 1 );
+      expect( parsed.techInfo.measures ).to.be( 2 );
     });
 
     it('Should parse number of tracks', function() {
-      expect( parsed.techInfo.tackNum ).to.be( 1 );
+      expect( parsed.techInfo.trackCount ).to.be( 1 );
     });
   });
 } );

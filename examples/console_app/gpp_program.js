@@ -2,6 +2,7 @@
 
 var args = process.argv.slice(2),
     Parser = require('../../lib/GuitarProParser.js'),
+    util = require('util'),
     fs = require('fs');
 
 if (args.length == 0)
@@ -13,5 +14,5 @@ args.map( function(file_path){
         parsed = parser.parse();
 
     console.log("\n\n");
-    console.dir(parsed);
+    console.dir(util.inspect(parsed, false, null));
 });

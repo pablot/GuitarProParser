@@ -112,12 +112,27 @@ describe('Parsing', function() {
       expect( parsed.technicalInfo.midiChannelsArray.length ).to.be( 64 );
     });
 
+    it( 'Should proper parse midi channels', function() {
+      var midiChannels = parsed.technicalInfo.midiChannelsArray;
+
+      expect( midiChannels[0].data.instrument ).to.be( 25 );
+      expect( midiChannels[1].data.instrument ).to.be( 25 );
+
+      for( var i = 2; i < 9; i++ ) {
+        expect( midiChannels[i].data.instrument ).to.be( 24 );
+      }
+
+      for( i = 10; i < 16; i++ ) {
+        expect( midiChannels[i].data.instrument ).to.be( 24 );
+      }
+    } );
+
     it('Should parse measures', function() {
       expect( parsed.technicalInfo.measures ).to.be( 2 );
     });
 
     it('Should parse number of tracks', function() {
-      expect( parsed.technicalInfo.tackNum ).to.be( 1 );
+      expect( parsed.technicalInfo.trackNumber ).to.be( 1 );
     });
   });
 } );

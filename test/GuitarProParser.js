@@ -14,7 +14,7 @@ describe('Parsing', function() {
   var parser,
       parsed;
 
-  beforeEach( function() {
+  before( function() {
     var data = fs.readFileSync( __dirname + '/files/test.gp4' );
     parser = new Parser(data);
     parsed = parser.parse();
@@ -59,7 +59,19 @@ describe('Parsing', function() {
     });
 
     it('Should parse notice', function() {
-      expect( parsed.header.notice ).to.be( 'N line 1\nN line 2\nN line 3\nN line 4\n' );
+      expect( parsed.header.notice1 ).to.be( 'N line 1' );
+    } );
+
+    it('Should parse notice', function() {
+      expect( parsed.header.notice2 ).to.be( 'N line 2' );
+    } );
+
+    it('Should parse notice', function() {
+      expect( parsed.header.notice3 ).to.be( 'N line 3' );
+    } );
+
+    it('Should parse notice', function() {
+      expect( parsed.header.notice4 ).to.be( 'N line 4' );
     } );
 
     it('Should parse triplet feel', function() {
@@ -75,37 +87,37 @@ describe('Parsing', function() {
     } );
 
     it('Should parse lyrics', function () {
-        expect(parsed.lyrics.lyrics).to.be( '1111\r\n1111\r\n1111\r\n1111\n2222\r\n2222\r\n2222\r\n2222\n3333\r\n3333\r\n3333\n4444\r\n4444\n5555');
+        expect(parsed.lyrics.lyric).to.be( '1111\r\n1111\r\n1111\r\n1111\n2222\r\n2222\r\n2222\r\n2222\n3333\r\n3333\r\n3333\n4444\r\n4444\n5555');
       });
   } );
 
   describe('TechInfo', function() {
     it('Should parse tempo', function() {
-      expect( parsed.techInfo.tempo ).to.be(120);
+      expect( parsed.technicalInfo.tempo ).to.be(120);
     });
 
     it('Should parse key', function() {
-      expect( parsed.techInfo.key ).to.be('G Major');
+      expect( parsed.technicalInfo.key ).to.be('G Major');
     });
 
     it('Should parse octave', function() {
-      expect( parsed.techInfo.octave ).to.be(0);
+      expect( parsed.technicalInfo.octave ).to.be(0);
     });
 
     it('Should parse midi channels to array', function() {
-      expect( parsed.techInfo.midiChannels ).to.be.a( Array );
+      expect( parsed.technicalInfo.midiChannelsArray ).to.be.a( Array );
     });
 
     it('Should have 64 midi channels', function() {
-      expect( parsed.techInfo.midiChannels.length ).to.be( 64 );
+      expect( parsed.technicalInfo.midiChannelsArray.length ).to.be( 64 );
     });
 
     it('Should parse measures', function() {
-      expect( parsed.techInfo.measures ).to.be( 2 );
+      expect( parsed.technicalInfo.measures ).to.be( 2 );
     });
 
     it('Should parse number of tracks', function() {
-      expect( parsed.techInfo.trackCount ).to.be( 1 );
+      expect( parsed.technicalInfo.tackNum ).to.be( 1 );
     });
   });
 } );
